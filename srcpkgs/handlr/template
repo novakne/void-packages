@@ -1,0 +1,16 @@
+# Template file for 'handlr'
+pkgname=handlr
+version=0.6.4
+revision=1
+build_style=cargo
+short_desc="Better xdg-utils"
+maintainer="Hugo Machet <mail@hmachet.com>"
+license="MIT"
+homepage="https://github.com/chmln/handlr"
+distfiles="https://github.com/chmln/handlr/archive/v${version}.tar.gz"
+checksum=7aae79775a08fdeb822eb0dafe90fdedffb97063649c9a950e9a8b8e6bf8e5ba
+
+post_install() {
+	vcompletion completions/_handlr zsh
+	vlicense LICENSE
+}
